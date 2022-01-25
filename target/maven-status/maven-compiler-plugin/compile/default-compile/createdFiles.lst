@@ -1,0 +1,15 @@
+jdk/shtam/projetboutique/resources/ClientResource.class
+jdk/shtam/projetboutique/resources/CategorieResource.class
+jdk/shtam/projetboutique/entities/ProduitAchete.class
+jdk/shtam/projetboutique/resources/JavaEE8Resource.class
+jdk/shtam/projetboutique/resources/AchatResource.class
+jdk/shtam/projetboutique/resources/ProduitAcheteResource.class
+jdk/shtam/projetboutique/entities/Personne.class
+jdk/shtam/projetboutique/JAXRSConfiguration.class
+jdk/shtam/projetboutique/entities/Client.class
+jdk/shtam/projetboutique/entities/Employe.class
+jdk/shtam/projetboutique/entities/Produit.class
+jdk/shtam/projetboutique/resources/ProduitResource.class
+jdk/shtam/projetboutique/entities/Achat.class
+jdk/shtam/projetboutique/resources/EmployeResource.class
+jdk/shtam/projetboutique/entities/Categorie.class

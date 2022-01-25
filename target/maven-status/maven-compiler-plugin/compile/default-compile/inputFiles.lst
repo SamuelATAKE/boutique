@@ -1,0 +1,15 @@
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/entities/ProduitAchete.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/resources/ProduitAcheteResource.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/resources/EmployeResource.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/entities/Personne.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/resources/ClientResource.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/entities/Achat.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/entities/Produit.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/resources/AchatResource.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/JAXRSConfiguration.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/entities/Categorie.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/resources/JavaEE8Resource.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/entities/Employe.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/resources/CategorieResource.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/resources/ProduitResource.java
+/home/jdkshtam/NetBeansProjects/ProjetBoutique/src/main/java/jdk/shtam/projetboutique/entities/Client.java
