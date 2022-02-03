@@ -10,6 +10,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import jdk.shtam.projetboutique.entities.Achat;
 import jdk.shtam.projetboutique.entities.Categorie;
 
@@ -28,33 +29,31 @@ public class CategorieResource {
     }
 
     @GET
-    @Path("/find")
-    public Categorie trouver(int id){
+    @Path("/{id}")
+    public Categorie trouver(@PathParam("id") int id){
       Categorie categorie = null;
       return categorie;   
     }
 
+    @GET
+    @Path("/count")
+    public int compter() {
+      return lister().size();   
+    }
+
     @POST
-    @Path("/add")
     public Categorie ajouter(Categorie categorie){
       return categorie;
     }
 
     @PUT
-    @Path("/update")
     public Categorie modifier(Categorie categorie){
        return categorie;
     }
 
     @DELETE
-    @Path("/delete")
-    public void delete(int id){
-
-    }
-
-    @DELETE
-    @Path("/delete")
-    public void delete(Categorie categorie){
+    @Path("/{id}")
+    public void delete(@PathParam("id") int id){
 
     }
 }

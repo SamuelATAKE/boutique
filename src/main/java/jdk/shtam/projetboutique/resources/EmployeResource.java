@@ -10,6 +10,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import jdk.shtam.projetboutique.entities.Employe;
 
 /**
@@ -20,39 +21,37 @@ import jdk.shtam.projetboutique.entities.Employe;
 public class EmployeResource {
     @GET
     @Path("/list")
-    public List<Employe> lister(){
+    public List<Employe> lister() {
       List<Employe> employes = null;
       return employes;
     }
 
     @GET
-    @Path("/find")
-    public Employe trouver(int id){
+    @Path("/{id}")
+    public Employe trouver(@PathParam("id") int id) {
       Employe employe = null;
       return employe;   
     }
 
+    @GET
+    @Path("/count")
+    public int compter() {
+      return lister().size();   
+    }
+
     @POST
-    @Path("/add")
-    public Employe ajouter(Employe employe){
+    public Employe ajouter(Employe employe) {
       return employe;
     }
 
     @PUT
-    @Path("/update")
-    public Employe modifier(Employe employe){
+    public Employe modifier(Employe employe) {
        return employe;
     }
 
     @DELETE
-    @Path("/delete")
-    public void delete(int id){
-
-    }
-
-    @DELETE
-    @Path("/delete")
-    public void delete(Employe employe){
+    @Path("/{id}")
+    public void delete(@PathParam("id") int id) {
 
     }
 }

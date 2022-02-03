@@ -15,10 +15,10 @@ import java.util.Objects;
  * @author jdkshtam
  */
 public class Personne {
-    Long id;
-    String nom;
-    String prenoms;
-    LocalDate dateNaissance;
+    private Long id;
+    private String nom;
+    private String prenoms;
+    private LocalDate dateNaissance;
 
     public Personne() {
     }
@@ -74,19 +74,5 @@ public class Personne {
        int age = (int) ChronoUnit.YEARS.between(getDateNaissance(), (Temporal) now);
        return age;
     } 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Personne)) return false;
-        Personne personne = (Personne) o;
-        return id.equals(personne.id) && nom.equals(personne.nom) && prenoms.equals(personne.prenoms) && dateNaissance.equals(personne.dateNaissance);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, nom, prenoms, dateNaissance);
-    }
-
     
 }

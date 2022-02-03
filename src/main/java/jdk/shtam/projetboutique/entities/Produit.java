@@ -14,11 +14,11 @@ import java.util.Date;
  * @author jdkshtam
  */
 public class Produit {
-    Long id;
-    String libelle;
-    Double prixUnitaire;
-    LocalDate datePeremption;
-    Categorie categorie;
+    private Long id;
+    private String libelle;
+    private Double prixUnitaire;
+    private LocalDate datePeremption;
+    private Categorie categorie;
 
     public Produit() {
     }

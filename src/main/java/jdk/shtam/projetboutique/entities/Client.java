@@ -5,14 +5,15 @@
 package jdk.shtam.projetboutique.entities;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 /**
  *
  * @author jdkshtam
  */
-public class Client extends Personne{
-    String cin;
-    String carteVisa;
+public class Client extends Personne {
+    private String cin;
+    private String carteVisa;
 
     public Client() {
     }
@@ -29,5 +30,24 @@ public class Client extends Personne{
         this.carteVisa = carteVisa;
     }
 
-    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Client)) return false;
+        Client client = (Client) o;
+        return cin.equals(client.cin) && carteVisa.equals(client.carteVisa);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cin, carteVisa);
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "cin='" + cin + '\'' +
+                ", carteVisa='" + carteVisa + '\'' +
+                '}';
+    }
 }

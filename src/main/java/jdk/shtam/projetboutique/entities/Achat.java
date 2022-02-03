@@ -5,19 +5,21 @@
 package jdk.shtam.projetboutique.entities;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
  * @author jdkshtam
  */
 public class Achat {
-    Long id;
-    LocalDateTime dateAchat;
-    Double remise;
-    Employe employe;
-    Client client;
-    List<ProduitAchete> produits;
+    private Long id;
+    private LocalDateTime dateAchat;
+    private Double remise;
+    private Employe employe;
+    private Client client;
+    private List<ProduitAchete> produits = new ArrayList<>();
 
     public Achat() {
     }
@@ -94,5 +96,30 @@ public class Achat {
           prixTotal += produitAchete.getPrixTotal();
        }
        return prixTotal;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Achat)) return false;
+        Achat achat = (Achat) o;
+        return getId().equals(achat.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
+
+    @Override
+    public String toString() {
+        return "Achat{" +
+                "id=" + id +
+                ", dateAchat=" + dateAchat +
+                ", remise=" + remise +
+                ", employe=" + employe +
+                ", client=" + client +
+                ", produits=" + produits +
+                '}';
     }
 }

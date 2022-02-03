@@ -10,6 +10,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import jdk.shtam.projetboutique.entities.ProduitAchete;
 
 /**
@@ -20,39 +21,37 @@ import jdk.shtam.projetboutique.entities.ProduitAchete;
 public class ProduitAcheteResource {
     @GET
     @Path("/list")
-    public List<ProduitAchete> lister(){
+    public List<ProduitAchete> lister() {
       List<ProduitAchete> produits = null;
       return produits;
     }
 
     @GET
-    @Path("/find")
-    public ProduitAchete trouver(int id){
+    @Path("/{id}")
+    public ProduitAchete trouver(@PathParam("id") int id) {
       ProduitAchete produit = null;
       return produit;   
     }
 
+    @GET
+    @Path("/count")
+    public int compter() {
+      return lister().size();   
+    }
+
     @POST
-    @Path("/add")
-    public ProduitAchete ajouter(ProduitAchete produit){
+    public ProduitAchete ajouter(ProduitAchete produit) {
       return produit;
     }
 
     @PUT
-    @Path("/update")
-    public ProduitAchete modifier(ProduitAchete produitAchete){
+    public ProduitAchete modifier(ProduitAchete produitAchete) {
        return produitAchete;
     }
 
     @DELETE
-    @Path("/delete")
-    public void delete(int id){
-
-    }
-
-    @DELETE
-    @Path("/delete")
-    public void delete(ProduitAchete produitAchete){
+    @Path("/{id}")
+    public void delete(@PathParam("id") int id) { 
 
     }
 }

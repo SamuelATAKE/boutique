@@ -11,7 +11,7 @@ import java.time.LocalDate;
  * @author jdkshtam
  */
 public class Employe extends Personne {
-    String cnss;
+    private String cnss;
 
     public Employe() {
     }

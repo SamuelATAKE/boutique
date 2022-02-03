@@ -10,6 +10,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import jdk.shtam.projetboutique.entities.Achat;
 import jdk.shtam.projetboutique.entities.Client;
 
@@ -21,39 +22,37 @@ import jdk.shtam.projetboutique.entities.Client;
 public class ClientResource {
     @GET
     @Path("/list")
-    public List<Client> lister(){
+    public List<Client> lister() {
       List<Client> clients = null;
       return clients;
     }
 
     @GET
-    @Path("/find")
-    public Client trouver(int id){
+    @Path("/{id}")
+    public Client trouver(@PathParam("id") int id) {
       Client client = null;
       return client;   
     }
 
+    @GET
+    @Path("/count")
+    public int compter() {
+      return lister().size();   
+    }
+
     @POST
-    @Path("/add")
-    public Client ajouter(Client client){
+    public Client ajouter(Client client) {
       return client;
     }
 
     @PUT
-    @Path("/update")
-    public Client modifier(Client client){
+    public Client modifier(Client client) {
        return client;
     }
 
     @DELETE
-    @Path("/delete")
-    public void delete(int id){
-
-    }
-
-    @DELETE
-    @Path("/delete")
-    public void delete(Client client){
+    @Path("/{id}")
+    public void delete(@PathParam("id") int id) {
 
     }
 }

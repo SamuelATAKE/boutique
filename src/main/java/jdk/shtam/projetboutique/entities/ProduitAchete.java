@@ -9,14 +9,15 @@ package jdk.shtam.projetboutique.entities;
  * @author jdkshtam
  */
 public class ProduitAchete {
-     Integer quantite;
-     Double remise;
-     Produit produit;
+     private Integer quantite;
+     private Double remise;
+     private Produit produit;
+     private Achat achat;
 
     public ProduitAchete() {
     }
 
-    public ProduitAchete(Integer quantite, Double remise, Produit produit) {
+    public ProduitAchete(Integer quantite, Double remise, Produit produit, Achat achat) {
         this.quantite = quantite;
         this.remise = remise;
         this.produit = produit;
@@ -49,6 +50,16 @@ public class ProduitAchete {
     public void setProduit(Produit produit) {
         this.produit = produit;
     }
+
+    public Achat getAchat() {
+        return achat;
+    }
+
+    public void setAchat(Achat achat) {
+        this.achat = achat;
+    }
+
+     
 
     
 }

@@ -10,6 +10,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import jdk.shtam.projetboutique.entities.Achat;
 
 /**
@@ -21,39 +22,37 @@ public class AchatResource {
     
     @GET
     @Path("/list")
-    public List<Achat> lister(){
+    public List<Achat> lister() {
       List<Achat> achats = null;
       return achats;
     }
 
     @GET
-    @Path("/find")
-    public Achat trouver(int id){
+    @Path("/{id}")
+    public Achat trouver(@PathParam("id") Long id) {
       Achat achat = null;
       return achat;   
     }
 
+    @GET
+    @Path("/count")
+    public int compter() {
+      return lister().size();   
+    } 
+
     @POST
-    @Path("/add")
-    public Achat ajouter(Achat achat){
+    public Achat ajouter(Achat achat) {
       return achat;
     }
 
     @PUT
-    @Path("/update")
-    public Achat modifier(Achat achat){
+    public Achat modifier(Achat achat) {
        return achat;
     }
 
     @DELETE
-    @Path("/delete")
-    public void delete(int id){
-
-    }
-
-    @DELETE
-    @Path("/delete")
-    public void delete(Achat achat){
+    @Path("/{id}")
+    public void delete(@PathParam("id") Long id) {
 
     }
 }
