@@ -37,7 +37,7 @@ public class ProduitService {
      }
 
      public ProduitService(List<Produit> produits) {
-        this.produits=produits;
+        ProduitService.produits=produits;
      }
 
      public Produit ajouter(Produit produit) {

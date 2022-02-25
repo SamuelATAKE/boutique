@@ -30,7 +30,7 @@ public class AchatService {
      }
 
      public AchatService(List<Achat> achats) {
-        this.achats=achats;
+        AchatService.achats=achats;
      }
 
      public Achat ajouter(Achat achat) {
